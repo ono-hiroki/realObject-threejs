@@ -41,6 +41,13 @@ scene.background = loader.load(urls);
 const controls = new OrbitControls(camera, canvas);
 controls.enableDamping = true;
 
+// object
+const material = new THREE.MeshBasicMaterial();
+const geometry = new THREE.SphereGeometry(350, 50, 50);
+const sphere = new THREE.Mesh(geometry, material);
+sphere.position.set(0, 100, 0);
+scene.add(sphere);
+
 
 function animate(){
     controls.update();
